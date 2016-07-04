@@ -2,19 +2,16 @@ const test = require('eater/runner').test;
 const calc = require('../index');
 const assert = require('power-assert');
 
-test('calc sum', (done) => {
+test('calc sum', () => {
   assert(calc.sum(1, 2) === 3);
-  done();
 });
 
-test('calc div', (done) => {
+test('calc div', () => {
   setTimeout(() => {
     assert(calc.div(1, 2) === 0.5);
-    done();
   }, 1000);
 });
 
-test('calc mul', (done) => {
+test('calc mul', () => {
   assert(calc.mul(2, 2) === 4);
-  done();
 });
